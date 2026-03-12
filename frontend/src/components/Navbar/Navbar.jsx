@@ -1,96 +1,112 @@
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav
-      style={{ padding: "0 100px" }}
-      className="font-garamond absolute top-0 left-0 w-full flex flex-row items-center justify-between py-4 bg-transparent"
-    >
-      <div className="cursor-pointer z-50">
-        <img style={{ width: "200px" }} src="/ms_logo_black.png" alt="" />
+    <nav className="font-garamond absolute top-0 left-0 w-full flex items-center justify-between py-4 px-6 md:px-10 lg:px-20 bg-transparent">
+
+      {/* Logo */}
+      <div className="cursor-pointer z-50 absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0">
+        <img
+          className="w-[140px] md:w-[170px] lg:w-[200px]"
+          src="/ms_logo_black.png"
+          alt="Logo"
+        />
       </div>
-      <div className="hidden md:block">
-        <ul className="list-none flex flex-row items-center justify-center gap-4">
+
+      {/* Desktop Menu (>=950px) */}
+      <div className="hidden min-[950px]:block">
+        <ul className="flex items-center gap-6">
           <li className="cursor-pointer">Photography</li>
           <li className="cursor-pointer">Films</li>
-          <li className="cursor-pointer">Contanct Us</li>
-
+          <li className="cursor-pointer">Contact Us</li>
           <li className="cursor-pointer">Editorial</li>
 
-          <li className="cursor-pointer">
+          <li>
             <a
               className="text-black"
-              href="https://www.instagram.com/ms_production_udr?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              href="https://www.instagram.com/ms_production_udr"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <i className="fa-brands fa-instagram"></i>
             </a>
           </li>
-          <li className="cursor-pointer">
+
+          <li>
             <a
               className="text-black"
               href="http://www.youtube.com/@mehboobstudiophotography1283"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <i className="fa-brands fa-youtube"></i>
             </a>
           </li>
+
           <li>
-            <button
-              style={{ borderRadius: "5px" }}
-              className="bg-[#b49e64] px-3 py-2 text-white hover:bg-[#B49E64] hover:opacity-75"
-            >
+            <button className="bg-[#b49e64] px-4 py-2 rounded text-white hover:opacity-80 transition">
               Get in Touch
             </button>
           </li>
         </ul>
       </div>
 
+      {/* Hamburger (<950px) */}
       <button
-        className="md:hidden flex flex-col gap-[5px] bg-transparent border-none cursor-pointer z-50 absolute right-6"
+        className="min-[950px]:hidden flex flex-col gap-[5px] bg-transparent border-none cursor-pointer z-50"
         onClick={() => setMenuOpen(!menuOpen)}
       >
         <span
-          className={`block w-6 h-0.5 bg-black transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-[7px]" : ""}`}
+          className={`block w-6 h-0.5 bg-black transition-all duration-300 ${
+            menuOpen ? "rotate-45 translate-y-[7px]" : ""
+          }`}
         />
         <span
-          className={`block w-6 h-0.5 bg-black transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`}
+          className={`block w-6 h-0.5 bg-black transition-all duration-300 ${
+            menuOpen ? "opacity-0" : ""
+          }`}
         />
         <span
-          className={`block w-6 h-0.5 bg-black transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-[7px]" : ""}`}
+          className={`block w-6 h-0.5 bg-black transition-all duration-300 ${
+            menuOpen ? "-rotate-45 -translate-y-[7px]" : ""
+          }`}
         />
       </button>
 
+      {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden fixed inset-0 bg-white z-40 flex flex-col items-center justify-center gap-6">
-          <li className="cursor-pointer list-none">Photography</li>
-          <li className="cursor-pointer list-none">Films</li>
-          <li className="cursor-pointer list-none">Contact Us</li>
-          <li className="cursor-pointer list-none">Editorial</li>
-          <li className="cursor-pointer list-none">
+        <div className="min-[950px]:hidden fixed inset-0 bg-white z-40 flex flex-col items-center justify-center gap-8 text-lg">
+
+          <li className="list-none cursor-pointer">Photography</li>
+          <li className="list-none cursor-pointer">Films</li>
+          <li className="list-none cursor-pointer">Contact Us</li>
+          <li className="list-none cursor-pointer">Editorial</li>
+
+          <li className="list-none">
             <a
               className="text-black"
-              href="https://www.instagram.com/ms_production_udr?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              href="https://www.instagram.com/ms_production_udr"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <i className="fa-brands fa-instagram"></i>
             </a>
           </li>
-          <li className="cursor-pointer list-none">
+
+          <li className="list-none">
             <a
               className="text-black"
               href="http://www.youtube.com/@mehboobstudiophotography1283"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <i className="fa-brands fa-youtube"></i>
             </a>
           </li>
-          <button
-            style={{ borderRadius: "5px" }}
-            className="bg-[#b49e64] px-3 py-2 text-white hover:opacity-75"
-          >
+
+          <button className="bg-[#b49e64] px-4 py-2 rounded text-white hover:opacity-80 transition">
             Get in Touch
           </button>
         </div>

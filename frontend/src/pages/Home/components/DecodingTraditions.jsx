@@ -1,53 +1,96 @@
 function DecodingTraditions() {
   return (
-    <>
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;600&family=Cormorant+Garamond:wght@300;400;500&display=swap');
-        .font-cormorant-sc { font-family: 'Cormorant SC', serif; }
-        .font-cormorant { font-family: 'Cormorant Garamond', serif; }
-      `}</style>
+    <section className="py-12 md:py-16 lg:py-24">
+      <div className="mx-auto w-[95vw] max-w-[1480px]">
+        {/* Mobile / tablet layout */}
+        <div className="lg:hidden">
+          <header className="mb-8 text-center">
+            <h1 className="font-soligant uppercase tracking-[0.22em] text-slate-900 text-[1.1rem]! sm:text-3xl md:text-4xl leading-tight">
+              Decoding New Trends For Age <br /> Old Traditions
+            </h1>
+          </header>
 
-      <div className="font-cormorant min-h-screen mt-5">
-        {/* Heading */}
-        <div className="text-center pt-12 pb-0 px-6 md:px-8">
-          <h1
-            className="font-soligant mb-5 uppercase font-normal leading-tight tracking-widest text-gray-900
-          text-4xl sm:text-5xl md:text-6xl lg:text-8xl"
-          >
-            Decoding New Trends
-            <br />
-            for Age-Old Traditions
-          </h1>
-        </div>
-
-        {/* Three column layout */}
-        <div className="grid grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto px-6 md:px-8 pb-16 items-center gap-10 md:gap-0">
-          {/* Left image */}
-          <div className="flex justify-center md:justify-start md:items-end h-full">
-            <img
-              src="/images/decoding_trends_1.jpg"
-              alt="Wedding couple"
-              className="w-full max-w-sm object-cover h-[420px] md:h-[560px]"
-            />
+          {/* Images side by side */}
+          <div className="grid grid-cols-2 gap-4 mb-8">
+            <figure className="h-56 sm:h-64 md:h-[420px] overflow-hidden">
+              <img
+                src="/images/decoding_trends_1.jpg"
+                alt="Wedding couple"
+                className="h-full w-full object-cover"
+              />
+            </figure>
+            <figure className="h-56 sm:h-64 md:h-[420px] overflow-hidden">
+              <img
+                src="/images/5W4A1229.jpg"
+                alt="Wedding couple outdoor"
+                className="h-full w-full object-cover"
+              />
+            </figure>
           </div>
 
-          {/* Center text */}
-          <div className="px-2 font-cormorant md:px-10 py-4 md:py-8 self-center text-center md:text-left">
-            <p className="font-cormorant text-sm md:text-base leading-relaxed text-gray-700 mb-5 tracking-wide">
+          {/* Copy below images */}
+          <div className="space-y-4 text-center text-sm sm:text-base leading-relaxed text-slate-800">
+            <p>
               Specializing in contemporary photography and filmmaking, Ivory
               Films has been capturing the love and wedding stories of couples
               with unparalleled artistry. Our dedication lies in capturing your
               love story with elegance and precision.
             </p>
 
-            <p className="font-cormorant text-sm md:text-base leading-relaxed text-gray-700 mb-5 tracking-wide">
-              Each moment from your "once in a lifetime" event is meticulously
-              selected and transformed into films and photographs you will
-              treasure forever. Ivory Films, where every frame tells a story,
-              and every story is a cherished memory.
+            <p>
+              Each moment from your &quot;once in a lifetime&quot; event is
+              meticulously selected and transformed into films and photographs
+              you will treasure forever. Ivory Films, where every frame tells a
+              story, and every story is a cherished memory.
             </p>
 
-            <p className="font-cormorant text-sm md:text-base leading-relaxed text-gray-700 tracking-wide">
+            <p>
+              Ivory Films emerged from a profound passion for photography and an
+              exceptional aptitude for managing clients and orchestrating grand
+              events. Our journey commenced in 2013, and since then, we have
+              adeptly captured the essence of numerous weddings and pre-wedding
+              celebrations.
+            </p>
+          </div>
+        </div>
+
+        {/* Desktop editorial layout */}
+        <div className="relative mx-auto max-w-[90vw] hidden lg:grid lg:grid-cols-3 lg:gap-10 xl:gap-14 lg:items-start">
+          {/* Overlapping heading */}
+          <header className="pointer-events-none absolute pt-5 -top--10 right-0 w-full flex justify-center tracking-wide z-20">
+            <h2 className="font-soligant uppercase text-slate-900 text-4xl xl:text-7xl! leading-tight text-right">
+              Decoding New Trends
+              <br />
+              For Age-Old Traditions
+            </h2>
+          </header>
+
+          {/* Left image */}
+          <figure className="pt-75 flex justify-start">
+            <img
+              src="/images/decoding_trends_1.jpg"
+              alt="Wedding couple outdoor"
+              className="w-[400px] xl:w-[480px] h-[500px] xl:h-[600px] object-cover shadow-lg"
+            />
+          </figure>
+
+          {/* Center copy */}
+          <div className="pt-60 space-y-5 text-base leading-relaxed text-slate-800 max-w-md">
+            <p>
+              Specializing in contemporary photography and filmmaking, Ivory
+              Films has been capturing the love and wedding stories of couples
+              with unparalleled artistry. Our dedication lies in capturing your
+              love story with elegance and precision.
+            </p>
+
+            <p>
+              Each moment from your &quot;once in a lifetime&quot; event is
+              meticulously selected and transformed into films and photographs
+              you will treasure forever. Ivory Films, where every frame tells a
+              story, and every story is a cherished memory.
+            </p>
+
+            <p>
               Ivory Films emerged from a profound passion for photography and an
               exceptional aptitude for managing clients and orchestrating grand
               events. Our journey commenced in 2013, and since then, we have
@@ -56,17 +99,17 @@ function DecodingTraditions() {
             </p>
           </div>
 
-          {/* Right image */}
-          <div className="flex justify-center md:justify-end md:items-start h-full">
+          {/* Right image (heading overlaps this area) */}
+          <figure className="flex justify-end">
             <img
-              src="/images/decoding_trends_2.jpg"
+              src="/images/5W4A1229.jpg"
               alt="Wedding couple outdoor"
-              className="w-full max-w-sm object-cover h-[420px] md:h-[560px]"
+              className="w-[400px] xl:w-[480px] h-[500px] xl:h-[600px] object-cover shadow-lg"
             />
-          </div>
+          </figure>
         </div>
       </div>
-    </>
+    </section>
   );
 }
 

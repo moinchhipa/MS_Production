@@ -2,7 +2,7 @@ import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import Hero from "./components/Hero";
 import DecodingTraditions from "./components/DecodingTraditions";
-// import HomeCarousel from "./components/HomeCrousel";
+import HomeCarousel from "./components/HomeCarousal";
 
 function Home() {
   return (
@@ -10,7 +10,7 @@ function Home() {
       <Navbar />
       <Hero />
       <DecodingTraditions />
-      {/* <HomeCarousel /> */}
+      <HomeCarousel />
       <Footer />
     </div>
   );
