@@ -1,7 +1,7 @@
 function Hero() {
   return (
     <div className="">
-      <img className="w-full" src="/images/5W4A1229.jpg" alt="" />
+      <img className="w-full" src="/images/hero.jpg" alt="" />
     </div>
   );
 }

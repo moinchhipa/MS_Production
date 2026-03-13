@@ -3,19 +3,24 @@ import { useEffect, useState } from "react";
 const SLIDES = [
   {
     id: 1,
-    src: "/images/home_carousel_1.jpg",
+    src: "/images/Home_Carausal/home_carousel_1.jpg",
     alt: "Elegant wedding couple",
   },
   {
     id: 2,
-    src: "/images/home_carousel_2.jpg",
+    src: "/images/Home_Carausal/home_carousel_2.jpg",
     alt: "Bride and groom celebration",
   },
   {
     id: 3,
-    src: "/images/home_carousel_3.jpg",
+    src: "/images/Home_Carausal/home_carousel_3.jpg",
     alt: "Luxury wedding details",
   },
+  {
+    id: 4,
+    src: "/images/Home_Carausal/home_carousel_4.jpg",
+    alt: "Romantic wedding moment",
+  }
 ];
 
 function HomeCarousal() {
@@ -32,40 +37,38 @@ function HomeCarousal() {
   }, []);
 
   return (
-    <section className="relative w-screen h-screen overflow-hidden">
+    <section className="relative w-full aspect-[16/9] overflow-hidden">
       {/* Slides */}
-      <div className="absolute inset-0 flex transition-transform duration-700 ease-out"
-           style={{ transform: `translateX(-${current * 100}%)` }}>
+      <div
+        className="absolute inset-0 flex transition-transform duration-700 ease-out"
+        style={{ transform: `translateX(-${current * 100}%)` }}
+      >
         {SLIDES.map((slide) => (
-          <div key={slide.id} className="w-screen h-screen flex-shrink-0">
+          <div key={slide.id} className="min-w-full h-full">
             <img
               src={slide.src}
               alt={slide.alt}
+              loading="lazy"
               className="w-full h-full object-cover"
             />
           </div>
         ))}
       </div>
 
-      {/* Simple dots indicator */}
+      {/* Dots */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-10">
         {SLIDES.map((slide, index) => (
           <button
             key={slide.id}
-            type="button"
             onClick={() => setCurrent(index)}
-            className={`h-2 w-2 rounded-full border border-white/70 transition-colors ${
-              current === index ? "bg-white" : "bg-white/20"
+            className={`h-3 w-3 rounded-full! border border-white ${
+              current === index ? "bg-white" : "bg-white/30"
             }`}
           />
         ))}
       </div>
-
-      {/* Gradient overlay for readability (optional) */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent" />
     </section>
   );
 }
 
 export default HomeCarousal;
-

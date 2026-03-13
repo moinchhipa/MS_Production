@@ -1,7 +1,7 @@
 function DecodingTraditions() {
   return (
     <section className="py-12 md:py-16 lg:py-24">
-      <div className="mx-auto w-[95vw] max-w-[1480px]">
+      <div className="mx-auto w-full max-w-[1480px] px-4 sm:px-6">
         {/* Mobile / tablet layout */}
         <div className="lg:hidden">
           <header className="mb-8 text-center">
@@ -11,17 +11,19 @@ function DecodingTraditions() {
           </header>
 
           {/* Images side by side */}
-          <div className="grid grid-cols-2 gap-4 mb-8">
-            <figure className="h-56 sm:h-64 md:h-[420px] overflow-hidden">
+          <div className="grid grid-cols-2 gap-3 mb-8">
+            <figure className="h-44 mt-5 sm:h-64 md:h-[420px] overflow-hidden">
               <img
-                src="/images/decoding_trends_1.jpg"
+                src="/images/Decoding_trends/decoding_trends_1.jpg"
                 alt="Wedding couple"
+                loading="lazy"
                 className="h-full w-full object-cover"
               />
             </figure>
-            <figure className="h-56 sm:h-64 md:h-[420px] overflow-hidden">
+            <figure className="h-44 sm:h-64 md:h-[420px] overflow-hidden">
               <img
-                src="/images/5W4A1229.jpg"
+                src="/images/Decoding_trends/hero.jpg"
+                loading="lazy"
                 alt="Wedding couple outdoor"
                 className="h-full w-full object-cover"
               />
@@ -29,7 +31,7 @@ function DecodingTraditions() {
           </div>
 
           {/* Copy below images */}
-          <div className="space-y-4 text-center text-sm sm:text-base leading-relaxed text-slate-800">
+          <div className="font-poppins space-y-4 text-center text-sm sm:text-base leading-relaxed text-slate-800">
             <p>
               Specializing in contemporary photography and filmmaking, Ivory
               Films has been capturing the love and wedding stories of couples
@@ -66,16 +68,17 @@ function DecodingTraditions() {
           </header>
 
           {/* Left image */}
-          <figure className="pt-75 flex justify-start">
+          <figure className="pt-75 flex justify-start min-w-0">
             <img
-              src="/images/decoding_trends_1.jpg"
+              src="/images/Decoding_trends/decoding_trends_1.jpg"
               alt="Wedding couple outdoor"
-              className="w-[400px] xl:w-[480px] h-[500px] xl:h-[600px] object-cover shadow-lg"
+              loading="lazy"
+              className="w-full max-w-[400px] xl:max-w-[480px] h-[500px] xl:h-[600px] object-cover shadow-lg"
             />
           </figure>
 
           {/* Center copy */}
-          <div className="pt-60 space-y-5 text-base leading-relaxed text-slate-800 max-w-md">
+          <div className="font-poppins font-light pt-60 space-y-5 text-base leading-relaxed text-slate-800 max-w-md min-w-0">
             <p>
               Specializing in contemporary photography and filmmaking, Ivory
               Films has been capturing the love and wedding stories of couples
@@ -100,11 +103,12 @@ function DecodingTraditions() {
           </div>
 
           {/* Right image (heading overlaps this area) */}
-          <figure className="flex justify-end">
+          <figure className="flex justify-end min-w-0">
             <img
-              src="/images/5W4A1229.jpg"
+              src="/images/Decoding_trends/hero.jpg"
               alt="Wedding couple outdoor"
-              className="w-[400px] xl:w-[480px] h-[500px] xl:h-[600px] object-cover shadow-lg"
+              loading="lazy"
+              className="w-full max-w-[400px] xl:max-w-[480px] h-[500px] xl:h-[600px] object-cover shadow-lg"
             />
           </figure>
         </div>
