@@ -1,10 +1,13 @@
-import Footer from "../../components/Footer/Footer";
-import Navbar from "../../components/Navbar/Navbar";
+import { Suspense, lazy } from "react";
+
+import Navbar from "../../components/Navbar";
 import Hero from "./components/Hero";
 import DecodingTraditions from "./components/DecodingTraditions";
-import HomeCarousel from "./components/HomeCarousal";
+const HomeCarousel = lazy(() => import("./components/HomeCarousal"));
 import Weddings from "./components/Weddings";
 import LargeVideo from "./components/LargeVideo";
+import Testimonials from "./components/Testimonials";
+import Footer from "../../components/Footer";
 
 function Home() {
   return (
@@ -12,9 +15,12 @@ function Home() {
       <Navbar />
       <Hero />
       <DecodingTraditions />
-      <HomeCarousel />
+      <Suspense fallback={<div>Loading carousel...</div>}>
+        <HomeCarousel />
+      </Suspense>
       <Weddings />
       <LargeVideo />
+      <Testimonials />
       <Footer />
     </div>
   );

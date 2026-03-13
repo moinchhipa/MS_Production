@@ -6,7 +6,7 @@ function Weddings() {
           Capturing the Madness and Chaos we call Weddings
         </h1>
       </div>
-      <div className="font-poppins text-center mt-4 text-sm sm:text-base leading-relaxed text-slate-800">
+      <div className="font-poppins text-[0.9rem]! md:text-[1rem]! lg:text-[1.1rem]! text-center mt-4 text-sm sm:text-base leading-relaxed text-slate-800">
         <p className="text-sm">
           Here, we present a meticulously curated collection of weddings from
           recent years, showcasing the authentic union of two souls in the most

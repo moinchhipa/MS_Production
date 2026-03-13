@@ -78,7 +78,7 @@ function DecodingTraditions() {
           </figure>
 
           {/* Center copy */}
-          <div className="font-poppins font-light pt-60 space-y-5 text-base leading-relaxed text-slate-800 max-w-md min-w-0">
+          <div className="font-poppins text-[0.9rem]! md:text-[1rem]! lg:text-[1.1rem]! font-light pt-60 space-y-5 text-base leading-relaxed text-slate-800 max-w-md min-w-0">
             <p>
               Specializing in contemporary photography and filmmaking, Ivory
               Films has been capturing the love and wedding stories of couples
