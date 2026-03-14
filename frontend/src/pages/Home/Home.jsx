@@ -7,6 +7,7 @@ const HomeCarousel = lazy(() => import("./components/HomeCarousal"));
 import Weddings from "./components/Weddings";
 import LargeVideo from "./components/LargeVideo";
 import Testimonials from "./components/Testimonials";
+import GetInTouch from "./components/GetInTouch";
 import Footer from "../../components/Footer";
 
 function Home() {
@@ -21,6 +22,7 @@ function Home() {
       <Weddings />
       <LargeVideo />
       <Testimonials />
+      <GetInTouch />
       <Footer />
     </div>
   );

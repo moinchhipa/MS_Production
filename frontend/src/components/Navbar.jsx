@@ -4,8 +4,7 @@ function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="font-garamond absolute top-0 left-0 w-full flex items-center justify-between py-4 px-6 md:px-10 lg:px-20 bg-transparent">
-
+    <nav className="font-poppins text-[0.9rem]! absolute top-0 left-0 w-full flex items-center justify-between py-4 px-6 md:px-10 lg:px-20 bg-transparent">
       {/* Logo */}
       <div className="cursor-pointer z-50 absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0">
         <img
@@ -18,10 +17,18 @@ function Navbar() {
       {/* Desktop Menu (>=950px) */}
       <div className="hidden min-[950px]:block">
         <ul className="flex items-center gap-6">
-          <li className="cursor-pointer">Photography</li>
-          <li className="cursor-pointer">Films</li>
-          <li className="cursor-pointer">Contact Us</li>
-          <li className="cursor-pointer">Editorial</li>
+          <li className="cursor-pointer hover:text-[#b49e64] transition">
+            Photography
+          </li>
+          <li className="cursor-pointer hover:text-[#b49e64] transition">
+            Films
+          </li>
+          <li className="cursor-pointer hover:text-[#b49e64] transition">
+            Contact Us
+          </li>
+          <li className="cursor-pointer hover:text-[#b49e64] transition">
+            Editorial
+          </li>
 
           <li>
             <a
@@ -30,7 +37,7 @@ function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="fa-brands fa-instagram"></i>
+              <i className="fa-brands fa-instagram text-[1.2rem]! hover:text-[#b49e64] transition"></i>
             </a>
           </li>
 
@@ -41,12 +48,12 @@ function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="fa-brands fa-youtube"></i>
+              <i className="fa-brands fa-youtube text-[1.2rem]! hover:text-[#b49e64] transition"></i>
             </a>
           </li>
 
           <li>
-            <button className="bg-[#b49e64] px-4 py-2 rounded text-white hover:opacity-80 transition">
+            <button className="font-poppins bg-[#b49e64] px-4 py-[0.6rem] rounded text-white hover:opacity-80 transition">
               Get in Touch
             </button>
           </li>
@@ -78,7 +85,6 @@ function Navbar() {
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="min-[950px]:hidden fixed inset-0 bg-white z-40 flex flex-col items-center justify-center gap-8 text-lg">
-
           <li className="list-none cursor-pointer">Photography</li>
           <li className="list-none cursor-pointer">Films</li>
           <li className="list-none cursor-pointer">Contact Us</li>
